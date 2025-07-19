@@ -29,3 +29,8 @@
         env\Scripts\activate
 4) Create App " django-admin startproject my_project"
 5) Run the app " py manage.py runserver"
+
+
+git remote add origin https://github.com/Meena-kumari88/my_django_project.git
+git branch -M main
+git push -u origin main

@@ -1,0 +1,31 @@
+1).Creatte env file using py " py -m venv env "
+2).Activate env " env\Scripts\activate "
+3).If get error related to permisssion 
+        Solution: Execution Policy ko temporarily allow karo
+        PowerShell ko "Run as Administrator" kholna hoga:
+
+        Start menu me jaake PowerShell search karo
+
+        Us par right-click karo aur "Run as administrator" select karo
+
+        Uske baad ye command run karo:
+
+        powershell
+        Copy
+        Edit
+        Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+        Tumse confirmation maangega, type karo:
+
+        css
+        Copy
+        Edit
+        A
+        (ye "Yes to All" ka option hai)
+
+        🔁 Ab dubara try karo:
+        powershell
+        Copy
+        Edit
+        env\Scripts\activate
+4) Create App " django-admin startproject my_project"
+5) Run the app " py manage.py runserver"

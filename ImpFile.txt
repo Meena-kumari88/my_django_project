@@ -34,3 +34,28 @@
 git remote add origin https://github.com/Meena-kumari88/my_django_project.git
 git branch -M main
 git push -u origin main
+
+
+*********** File Structure *****************
+MY_DJANGO_PROJECT/
+├── my_project/
+│   ├── __init__.py
+│   ├── settings.py 
+│   ├── urls.py 
+│   ├── wsgi.py
+│   └── asgi.py
+├── my_django_project/
+│   ├── admin.py 
+│   ├── models.py 
+│   ├── apps.py
+│   └── migrations/
+├── manage.py 
+
+
+
+Path for run migrations and migrate 
+"(env) PS C:\Users\HP\OneDrive\Desktop\my_django_project\my_project> "
+ ****py manage.py makemigration
+ ****py manage.py migrate
+ ****py manage.py runserver
+

@@ -59,3 +59,7 @@ Path for run migrations and migrate
  ****py manage.py migrate
  ****py manage.py runserver
 
+
+ ✅ 1. To Delete All Data (but keep schema):
+    Use Django’s flush command: "py manage.py flush"
+

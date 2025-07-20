@@ -1,0 +1,17 @@
+{% extends "my_django_project/base.html"%}
+{% block title %} Add new user {% endblock %}
+
+{% block content %}
+<h1>Create New User</h1>
+<Form method="POST">
+    {% csrf_token %}
+    <label>Name:</label><br>
+    <input type="text" name="name"><br>
+    <label>Email</label>
+    <input type="email" name="email"><br>
+    <label>Role</label>
+    <input type="text" name="role">
+    <input type="submit" value="Create User">
+</Form>
+<a href = "{% url 'my_django_project:users' %}">Back</a>
+{% endblock %}

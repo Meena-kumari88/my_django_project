@@ -1,8 +1,10 @@
 {% extends "my_django_project/base.html"%}
-{% block title %} {{user.name}} {% endblock %}
+{% block title %} User Detail {% endblock %}
 
 {% block content %}
 
-<h1>{{user.name}}</h1>
-
+<h2>User Detail</h2>
+<p><strong>Name </strong>{{ user.name}}</p>
+<p><strong>Email </strong>{{ user.email}}</p>
+<p><strong>Role </strong>{{ user.role}}</p>
 {% endblock %}

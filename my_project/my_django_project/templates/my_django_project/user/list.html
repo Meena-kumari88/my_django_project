@@ -1,9 +1,0 @@
-{% extends "my_django_project/base.html"%}
-{% block title %} users {% endblock %}
-
-{% block content %}
-<h1>Users</h1>
-{% for user in users %}
-<h1>{{user.name}}</h1>
-{% endfor %}
-{% endblock %}

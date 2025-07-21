@@ -38,18 +38,40 @@ git push -u origin main
 
 *********** File Structure *****************
 MY_DJANGO_PROJECT/
-├── my_project/
+│
+├── config/                  # (Possibly your virtual environment or settings folder)
+├── env/                     # (Your virtual environment folder)
+│
+├── my_project/              # Your Django main project folder
 │   ├── __init__.py
-│   ├── settings.py 
-│   ├── urls.py 
+│   ├── settings.py
+│   ├── urls.py
 │   ├── wsgi.py
-│   └── asgi.py
-├── my_django_project/
-│   ├── admin.py 
-│   ├── models.py 
+│   ├── asgi.py
+│
+├── my_django_project/       # Your app folder
+│   ├── __init__.py
+│   ├── admin.py
 │   ├── apps.py
-│   └── migrations/
-├── manage.py 
+│   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   ├── views.py
+│   ├── migrations/
+│
+│   └── templates/
+│       └── my_django_project/
+│           ├── base.html
+│           └── user/
+│               ├── detail.html
+│               ├── new_user.html
+│               └── users.html
+│
+├── db.sqlite3               # Your default database
+├── manage.py
+├── README.md
+
 
 
 
@@ -63,3 +85,14 @@ Path for run migrations and migrate
  ✅ 1. To Delete All Data (but keep schema):
     Use Django’s flush command: "py manage.py flush"
 
+sql query
+
+ py manage.py shell
+ from my_django_project.models import User
+ User.objects.create(name="Rani", email="rani@gmail.com", role="user")
+ User.objects.all()
+ for user in User.objects.all():
+...     print(user.id, user.name, user.email, user.role)
+
+ user = User.objects.get(id=2)
+>>> print(user.name, user.email, user.role)
